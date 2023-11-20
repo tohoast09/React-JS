@@ -7,6 +7,7 @@ import UsestatePage from './pages/Usestate'
 import GiftsPage from './pages/Gifts'
 import BindingPage from './pages/Binding'
 import TodoListPage from './pages/Todolist'
+import MountedPage from './pages/Mounted'
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
           <li>
             <Link to ="/Todolist">TodoList</Link>
           </li>
+          <li>
+            <Link to ="/Mounted">Mounted</Link>
+          </li>
         </ul>
       </nav>
 
@@ -41,6 +45,7 @@ function App() {
         <Route path = "/Gifts" element={<GiftsPage />} />
         <Route path = "/Binding" element={<BindingPage />} />
         <Route path = "/Todolist" element={<TodoListPage />} />
+        <Route path = "/Mounted" element={<MountedPage />} />
       </Routes>
     </div>
   )
