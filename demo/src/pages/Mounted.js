@@ -1,5 +1,5 @@
 
-import TodolistPage from './Todolist'
+import UseEffectPage from './Useeffect'
 import {useState} from 'react'
 
 
@@ -12,7 +12,7 @@ function Mounted() {
         <div style ={{padding: 30}}>
             <h1>Mounted</h1>
             <button onClick={() =>setShowPage(!showPage)}>SHOW</button>
-            {showPage && <TodolistPage />}
+            {showPage && <UseEffectPage />}
         </div>
     )
 }

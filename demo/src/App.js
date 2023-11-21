@@ -8,8 +8,10 @@ import GiftsPage from './pages/Gifts'
 import BindingPage from './pages/Binding'
 import TodoListPage from './pages/Todolist'
 import MountedPage from './pages/Mounted'
+import UseEffectPage from './pages/Useeffect'
 
 function App() {
+
   return (
     <div>
       <nav>
@@ -35,8 +37,12 @@ function App() {
           <li>
             <Link to ="/Mounted">Mounted</Link>
           </li>
+          <li>
+            <Link to ="/Useeffect">Use Effect</Link>
+          </li>
         </ul>
       </nav>
+
 
       <Routes>
         <Route path = "/" element={<HomePage />} />
@@ -46,6 +52,7 @@ function App() {
         <Route path = "/Binding" element={<BindingPage />} />
         <Route path = "/Todolist" element={<TodoListPage />} />
         <Route path = "/Mounted" element={<MountedPage />} />
+        <Route path = "/Useeffect" element={<UseEffectPage />} />
       </Routes>
     </div>
   )
