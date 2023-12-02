@@ -9,6 +9,9 @@ import BindingPage from './pages/Binding'
 import TodoListPage from './pages/Todolist'
 import MountedPage from './pages/Mounted'
 import UseEffectPage from './pages/Useeffect'
+import CountDownPage from './pages/Countdown'
+import ChatAppPage from './pages/Chatapp'
+
 
 function App() {
 
@@ -40,6 +43,12 @@ function App() {
           <li>
             <Link to ="/Useeffect">Use Effect</Link>
           </li>
+          <li>
+            <Link to ="/Countdown">Count Down</Link>
+          </li>
+          <li>
+            <Link to ="/Chatapp">Chat App Fake</Link>
+          </li>
         </ul>
       </nav>
 
@@ -53,6 +62,8 @@ function App() {
         <Route path = "/Todolist" element={<TodoListPage />} />
         <Route path = "/Mounted" element={<MountedPage />} />
         <Route path = "/Useeffect" element={<UseEffectPage />} />
+        <Route path = "/Countdown" element={<CountDownPage />} />
+        <Route path = "/Chatapp" element={<ChatAppPage />} />
       </Routes>
     </div>
   )

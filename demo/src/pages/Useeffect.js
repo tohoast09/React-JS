@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react'
+import AvatarPage from './Avatar'
 /*
 Side effect: khi thay đổi dữ liệu thì chương trình thay đổi
 1. Update DOM
@@ -41,7 +42,7 @@ function Useeffect() {
     //Khi thực hiện 1 logic mới thì nên viết ra một useEffect mới
     useEffect(() => {
         const handleScroll = () => {
-            console.log(window.scrollY);
+            // console.log(window.scrollY);
             if(window.scrollY >= 200){
                 setShowGoToTop(true)
             } else{
@@ -64,8 +65,16 @@ function Useeffect() {
     //Nếu fetch API ở đây => mỗi lần render thì sẽ call api
 
         // console.log('render 1');
+    const [showAvatar, setShowAvatar] = useState(false)
+    const handleShowAvatar = () => {
+        setShowAvatar(!showAvatar)
+    }
     return (
+        
         <div style={{padding: 30}}>
+            <button onClick={handleShowAvatar}>Show Avatar</button>
+            {showAvatar && <AvatarPage/>}
+            <hr/>
             {
                 tab.map((tab)=>(
                     <button style={apiData === tab ? {color: '#fff', backgroundColor:'#333'} : {} } onClick={()=>setApiData(tab)} key = {tab}>{tab}</button>

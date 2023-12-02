@@ -5,6 +5,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//Fake commment
+function emitComment(id){
+  setInterval(() => {
+    window.dispatchEvent(
+      new CustomEvent(`lesson-${id}`, {
+        detail: `Đây là nội dung của lesson ${id}`,
+        type: 'hello'
+      })
+    ) //Phát ở đối tượng window, cứ sai 2s thì sẽ phát 1 event là lesson-id
+  },2000)
+}
+
+emitComment(1)
+emitComment(2)
+emitComment(3)
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>

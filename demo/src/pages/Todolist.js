@@ -34,7 +34,7 @@ function TodoList() {
 
     return (
         <div style={{ padding: 32 }}>
-            <input
+            <input 
                 value ={todo}
                 onChange={(e) => handleInput(e.target.value)}
             >
